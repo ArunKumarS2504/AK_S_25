@@ -14,7 +14,7 @@ public class NewPrime {
    public static void num() {
 	   
 	   int[] numbers = {13,17,21,31,5,999991,23,25};
-	   int n,count=0;
+	   int n;
 	   
 	   for(int i=0;i<numbers.length;i++) {
 		   n=numbers[i];
@@ -23,7 +23,6 @@ public class NewPrime {
 			   if(n%j==0) {
 				   rem++;  
 			   }
-			   count++;
 		   }
 		   if(rem==2) {
 			   System.out.println("prime"+numbers[i]);
