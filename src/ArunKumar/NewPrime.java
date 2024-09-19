@@ -4,14 +4,15 @@ public class NewPrime {
 	   
 	public static void main(String arg[]) {
 		 num();
-		
-		 
+	
 		
 	}
 
 
   
    public static void num() {
+
+	
 	   
 	   int[] numbers = {13,17,21,31,5,999991,23,25};
 	   int n;
