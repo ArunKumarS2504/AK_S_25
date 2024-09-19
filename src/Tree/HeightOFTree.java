@@ -66,6 +66,27 @@ public class HeightOFTree {
         return (left != null) ? left : right;
     }
 		
+	
+	public int distance(HeightOFTree root,HeightOFTree node ,int distance) {
+		
+		if(root==null) {
+		    return -1;	
+		}
+		if(node==root) {
+			return distance;
+		}
+		int leftdistance= distance(root.left,node,distance+1);
+		int rightdistance= distance(root.right,node,distance+1);
+		
+		if (leftdistance != -1) {
+            return leftdistance;
+        }
+
+        return rightdistance;
+    }
+		
+		
+	
 			
       public static void main(String[] args)
 			    {
@@ -85,21 +106,30 @@ public class HeightOFTree {
 			    
 			    HeightOFTree p = tree.root.left.left; 
 		        HeightOFTree q = tree.root.right.right;
-
-		        HeightOFTree lca = tree.findLCA(tree.root, p, q);
-
-		        if (lca != null) {
-		            System.out.println("Lowest Common Ancestor: " + lca.data);
-		        } else {
-		            System.out.println("No Common Ancestor found.");
+//
+//		        HeightOFTree lca = tree.findLCA(tree.root, p, q);
+//
+//		        if (lca != null) {
+//		            System.out.println("Lowest Common Ancestor: " + lca.data);
+//		        } else {
+//		            System.out.println("No Common Ancestor found.");
+//		        }
+		        
+		       // if(distance!=null) {
+		        	
+		        	
+		        	
 		        }
-			
+//			
 			
 		}
+
+
+	
 		
 		
 		
-	}
+	
 	
 	
 
